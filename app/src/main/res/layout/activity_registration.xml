@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_frame"
+    tools:context=".RegistrationActivity">
+
+    <!-- ─── Верхняя панель ─────────────────────────────────────────── -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_back_arrow"
+            android:contentDescription="@string/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Регистрация"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jura_regular"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ─── Форма (прокручивается) ─────────────────────────────────── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="95dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ——— Имя ——— -->
+            <LinearLayout
+                style="@style/Row"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Имя:"/>
+
+                <EditText
+                    android:id="@+id/etName"
+                    style="@style/Input"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Фамилия ——— -->
+            <LinearLayout style="@style/Row">
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Фамилия:"/>
+
+                <EditText
+                    android:id="@+id/etSurname"
+                    style="@style/Input"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Телефон ——— -->
+            <LinearLayout style="@style/Row">
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Телефон:"/>
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    style="@style/Input"
+                    android:inputType="phone"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Пол (Spinner) ——— -->
+            <LinearLayout style="@style/Row">
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Пол:"/>
+
+                <Spinner
+                    android:id="@+id/spGender"
+                    style="@style/Input"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Паспорт ——— -->
+            <TextView
+                style="@style/SectionLabel"
+                android:text="Данные паспорта:"/>
+
+            <LinearLayout
+                style="@style/RowSmall">
+
+                <EditText
+                    android:id="@+id/etPassportSeries"
+                    style="@style/InputShort"
+                    android:hint="Серия"/>
+
+                <EditText
+                    android:id="@+id/etPassportNumber"
+                    style="@style/InputMedium"
+                    android:hint="Номер"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Действителен до ——— -->
+            <LinearLayout style="@style/Row">
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Действителен до:"/>
+
+                <EditText
+                    android:id="@+id/etValidTill"
+                    style="@style/Input"
+                    android:hint="ДД.ММ.ГГГГ"
+                    android:inputType="date"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Адрес ——— -->
+            <LinearLayout style="@style/Row">
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Адрес:"/>
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    style="@style/Input"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Дом / корпус ——— -->
+            <LinearLayout style="@style/RowSmall">
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Дом:"/>
+
+                <EditText
+                    android:id="@+id/etHouse"
+                    style="@style/InputShort"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    style="@style/LabelText"
+                    android:text="Корпус:"
+                    android:layout_marginStart="12dp"/>
+
+                <EditText
+                    android:id="@+id/etBuilding"
+                    style="@style/InputShort"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Кадастровый номер ——— -->
+            <TextView
+                style="@style/SectionLabel"
+                android:text="Кадастровый номер:"/>
+
+            <LinearLayout
+                style="@style/RowSmall"
+                android:layout_marginTop="4dp">
+
+                <EditText
+                    android:id="@+id/etCad1"
+                    style="@style/InputTiny"/>
+
+                <TextView
+                    style="@style/Dots"/>
+
+                <EditText
+                    android:id="@+id/etCad2"
+                    style="@style/InputTiny"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    style="@style/Dots"/>
+
+                <EditText
+                    android:id="@+id/etCad3"
+                    style="@style/InputTiny"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    style="@style/Dots"/>
+
+                <EditText
+                    android:id="@+id/etCad4"
+                    style="@style/InputTiny"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- ——— Чекбоксы ——— -->
+            <CheckBox
+                android:id="@+id/cbPolicy"
+                style="@style/CheckRow"
+                android:text="Согласен(-а) с политикой обработки персональных данных"/>
+
+            <CheckBox
+                android:id="@+id/cbNews"
+                style="@style/CheckRow"
+                android:layout_marginTop="4dp"
+                android:text="Получать уведомления/рассылки о новостях"/>
+
+            <!-- ——— Кнопка ——— -->
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/GreenButton"
+                android:layout_marginTop="32dp"
+                android:text="Регистрация" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

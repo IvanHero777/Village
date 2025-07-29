@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EDAB">
+
+    <!-- header -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8DB74B">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/jura_regular"
+            android:text="Новости"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_profile" />
+
+    </FrameLayout>
+
+    <!-- basement -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.4dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_news"
+            android:background="@drawable/shape_active_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_megaphone"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_service"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_inactive_basement_btn"
+            android:src="@drawable/ic_graph"></android.widget.ImageButton>
+
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cart"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

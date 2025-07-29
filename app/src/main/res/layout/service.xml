@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EDAB">
+
+    <!-- Заголовок -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8DB74B"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/jura_regular"
+            android:text="Районные службы"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <!-- Иконка профиля справа -->
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/sym_def_app_icon" />
+    </FrameLayout>
+
+    <!-- Сетка кнопок (6 штук) -->
+    <GridLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:padding="15dp"
+        android:layout_gravity="top"
+        android:useDefaultMargins="true"
+        >
+        <!-- 6 кнопок -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_round"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Иконка сверху -->
+                <ImageButton
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service" />
+
+                <!-- Текст снизу -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Услуги электрика"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_round"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Иконка сверху -->
+                <ImageButton
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service" />
+
+                <!-- Текст снизу -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Услуги электрика"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_round"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Иконка сверху -->
+                <ImageButton
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service" />
+
+                <!-- Текст снизу -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Услуги электрика"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_round"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Иконка сверху -->
+                <ImageButton
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service" />
+
+                <!-- Текст снизу -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Услуги электрика"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_round"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Иконка сверху -->
+                <ImageButton
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service" />
+
+                <!-- Текст снизу -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Услуги электрика"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_round"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Иконка сверху -->
+                <ImageButton
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service" />
+
+                <!-- Текст снизу -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Услуги электрика"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </GridLayout>
+
+    <!-- Седьмая кнопка — техническая поддержка -->
+    <Button
+        android:id="@+id/support_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="405dp"
+        android:text="Техническая поддержка"
+        android:drawableLeft="@android:drawable/ic_menu_manage"
+        android:background="@drawable/shape_round"
+        android:textColor="@android:color/black"
+        android:padding="12dp"/>
+
+    <!-- Нижнее меню -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.4dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_news"
+            android:background="@drawable/shape_active_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_megaphone"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_service"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_graph"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cart"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

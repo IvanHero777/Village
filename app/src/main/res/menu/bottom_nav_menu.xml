@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_news"
+        android:title="Главная"/>
+
+    <item
+        android:id="@+id/nav_surveys"
+        android:icon="@drawable/ic_megaphone"
+        android:title="Опросы"/>
+
+    <item
+        android:id="@+id/nav_city"
+        android:icon="@drawable/ic_service"
+        android:title="Город"/>
+
+    <item
+        android:id="@+id/nav_tasks"
+        android:icon="@drawable/ic_graph"
+        android:title="Задачи"/>
+
+    <item
+        android:id="@+id/nav_shop"
+        android:icon="@drawable/ic_cart"
+        android:title="Магазин"/>
+</menu>

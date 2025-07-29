@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ─────────── Общая сетка строк ─────────── -->
+    <!-- Горизонтальная строка «лейбл + поле»      -->
+    <style name="Row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <!-- Та же строка, но используется там,        -->
+    <!-- где могут быть несколько маленьких полей -->
+    <style name="RowSmall" parent="Row"/>
+
+    <!-- ─────────── Текстовые подписи ─────────── -->
+    <style name="LabelText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- Подзаголовок секции («Данные паспорта»…) -->
+    <style name="SectionLabel" parent="LabelText">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ─────────── Поля ввода ─────────────────── -->
+    <style name="InputBase">
+        <item name="android:background">@drawable/shape_round2</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Поле, занимающее всю оставшуюся ширину -->
+    <style name="Input" parent="InputBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Короткие и узкие варианты для серии, дома и т. д. -->
+    <style name="InputShort"  parent="InputBase">
+        <item name="android:layout_width">80dp</item>
+    </style>
+
+    <style name="InputMedium" parent="InputBase">
+        <item name="android:layout_width">120dp</item>
+    </style>
+
+    <style name="InputTiny"   parent="InputBase">
+        <item name="android:layout_width">60dp</item>
+    </style>
+
+    <!-- ─────────── Разделители « : » в кадастре ─────────── -->
+    <style name="Dots">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text"> : </item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- ─────────── Чекбоксы ─────────────────────────────── -->
+    <style name="CheckRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:buttonTint">#669933</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <!-- ─────────── Кнопка регистрации ───────────────────── -->
+    <style name="GreenButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <!-- res/values/styles.xml -->
+    <style name="SectionTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- Подавляем выделение текста, задаём базовый цвет -->
+    <style name="SurveyBase">
+        <item name="android:textIsSelectable">false</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="SurveyTitle" parent="SurveyBase">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>   <!-- ← явно -->
+    </style>
+
+    <style name="SurveySubtitle" parent="SurveyBase">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>   <!-- ← явно -->
+        <item name="android:layout_marginTop">24dp</item>
+    </style>
+
+
+    <style name="SurveyBody" parent="SurveyBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="SurveyRadio">
+        <!-- визуальный кружок 24 dp, зеленый при выборе -->
+        <item name="android:button">@drawable/rb_selector_green</item>
+
+        <!-- убираем системные 48 dp -->
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+
+
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.villagenetworkapp.HomeFragment"
+        android:label="Главная" />
+
+    <fragment
+        android:id="@+id/surveysFragment"
+        android:name="com.example.villagenetworkapp.SurveysFragment"
+        android:label="Опросы" />
+
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="ru.yourapp.ui.CityFragment"
+        android:label="Город" />
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="ru.yourapp.ui.TasksFragment"
+        android:label="Задачи" />
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="ru.yourapp.ui.ShopFragment"
+        android:label="Магазин" />
+</navigation>

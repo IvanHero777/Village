@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D6EDAB">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#8DB74B"
+        android:text="Данные аккаунта"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Контейнер с данными -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Фото -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Фото профиля" />
+
+        <!-- Имя -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Антон Тетюшкин"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+        <!-- Подпись -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Житель СШК" />
+
+        <!-- Адрес -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Адрес проживания: Улица Карла-Либкнехта, 12/1" />
+
+        <!-- Телефон -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Номер телефона: +7 (913) 522-81-33" />
+
+        <!-- Почта и кнопка "Добавить" -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Почта: [NONE]  " />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Нижнее меню -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.4dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_news"
+            android:background="@drawable/shape_active_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_megaphone"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_service"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_graph"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cart"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+
+
+
+    </LinearLayout>
+</LinearLayout>
