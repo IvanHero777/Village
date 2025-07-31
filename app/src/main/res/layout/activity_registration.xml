@@ -2,12 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/registration_frame"
     tools:context=".RegistrationActivity">
 
-    <!-- ─── Верхняя панель ─────────────────────────────────────────── -->
+    <!-- Верхняя панель -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
@@ -28,7 +29,7 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Регистрация"
+            android:text="@string/reg_title"
             android:textSize="28sp"
             android:textColor="@color/black"
             android:fontFamily="@font/jura_regular"
@@ -39,7 +40,7 @@
             app:layout_constraintHorizontal_bias="0.5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- ─── Форма (прокручивается) ─────────────────────────────────── -->
+    <!-- Форма -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -51,184 +52,226 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
 
-            <!-- ——— Имя ——— -->
+            <!-- Имя -->
             <LinearLayout
                 style="@style/Row"
-                android:layout_marginTop="0dp">
-
+                android:layout_marginTop="8dp">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Имя:"/>
-
+                    android:text="@string/label_name"
+                    android:fontFamily="@font/jura_regular"
+                    android:background="@drawable/bg_label"
+                    android:textSize="22dp"
+                    android:padding="6sp"/>
                 <EditText
                     android:id="@+id/etName"
                     style="@style/Input"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/hint_name"
+                    android:inputType="textPersonName"/>
             </LinearLayout>
 
-            <!-- ——— Фамилия ——— -->
+            <!-- Фамилия -->
             <LinearLayout style="@style/Row">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Фамилия:"/>
-
+                    android:text="@string/label_surname"
+                    android:background="@drawable/bg_label"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:padding="6dp"/>
                 <EditText
                     android:id="@+id/etSurname"
                     style="@style/Input"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/hint_surname"
+                    android:layout_marginTop="5dp"
+                    android:inputType="textPersonName"/>
             </LinearLayout>
 
-            <!-- ——— Телефон ——— -->
+            <!-- Телефон -->
             <LinearLayout style="@style/Row">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Телефон:"/>
-
+                    android:text="@string/label_phone"
+                    android:background="@drawable/bg_label"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:padding="6dp"/>
                 <EditText
                     android:id="@+id/etPhone"
                     style="@style/Input"
-                    android:inputType="phone"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/hint_phone"
+                    android:inputType="phone"/>
             </LinearLayout>
 
-            <!-- ——— Пол (Spinner) ——— -->
+            <!-- Пол -->
             <LinearLayout style="@style/Row">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Пол:"/>
-
+                    android:text="@string/label_gender"
+                    android:background="@drawable/bg_label"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:padding="6dp"/>
                 <Spinner
                     android:id="@+id/spGender"
+                    android:layout_marginTop="5dp"
                     style="@style/Input"
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
 
-            <!-- ——— Паспорт ——— -->
+            <!-- Паспорт -->
             <TextView
                 style="@style/SectionLabel"
-                android:text="Данные паспорта:"/>
-
-            <LinearLayout
-                style="@style/RowSmall">
-
+                android:text="@string/section_passport"
+                android:textSize="22sp"
+                android:fontFamily="@font/jura_regular"
+                android:layout_marginTop="16dp"/>
+            <LinearLayout style="@style/RowSmall">
                 <EditText
                     android:id="@+id/etPassportSeries"
                     style="@style/InputShort"
-                    android:hint="Серия"/>
-
+                    android:hint="@string/hint_series"
+                    android:inputType="number"/>
                 <EditText
                     android:id="@+id/etPassportNumber"
                     style="@style/InputMedium"
-                    android:hint="Номер"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/hint_number"
+                    android:inputType="number"/>
             </LinearLayout>
 
-            <!-- ——— Действителен до ——— -->
+            <!-- Действителен до -->
             <LinearLayout style="@style/Row">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Действителен до:"/>
-
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:text="@string/label_valid_till"
+                    android:background="@drawable/bg_label"
+                    android:padding="6dp"/>
                 <EditText
                     android:id="@+id/etValidTill"
                     style="@style/Input"
-                    android:hint="ДД.ММ.ГГГГ"
-                    android:inputType="date"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/hint_valid_till"
+                    android:inputType="date"/>
             </LinearLayout>
 
-            <!-- ——— Адрес ——— -->
+            <!-- Адрес -->
             <LinearLayout style="@style/Row">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Адрес:"/>
-
+                    android:text="@string/label_address"
+                    android:background="@drawable/bg_label"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:padding="6dp"/>
                 <EditText
                     android:id="@+id/etAddress"
                     style="@style/Input"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/hint_address"
+                    android:inputType="textPostalAddress"/>
             </LinearLayout>
 
-            <!-- ——— Дом / корпус ——— -->
+            <!-- Дом/Корпус -->
             <LinearLayout style="@style/RowSmall">
                 <TextView
                     style="@style/LabelText"
-                    android:text="Дом:"/>
-
+                    android:text="@string/label_house"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:background="@drawable/bg_label"
+                    android:padding="6dp"/>
                 <EditText
                     android:id="@+id/etHouse"
                     style="@style/InputShort"
-                    android:layout_marginStart="8dp"/>
-
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/hint_house"
+                    android:inputType="text"/>
                 <TextView
                     style="@style/LabelText"
-                    android:text="Корпус:"
-                    android:layout_marginStart="12dp"/>
-
+                    android:text="@string/label_building"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/jura_regular"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/bg_label"
+                    android:padding="6dp"/>
                 <EditText
                     android:id="@+id/etBuilding"
                     style="@style/InputShort"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/hint_building"
+                    android:inputType="text"/>
             </LinearLayout>
 
-            <!-- ——— Кадастровый номер ——— -->
+            <!-- Кадастр. номер -->
             <TextView
                 style="@style/SectionLabel"
-                android:text="Кадастровый номер:"/>
-
+                android:textSize="22sp"
+                android:fontFamily="@font/jura_regular"
+                android:text="@string/section_cadnumber"
+                android:layout_marginTop="16dp"/>
             <LinearLayout
                 style="@style/RowSmall"
                 android:layout_marginTop="4dp">
-
                 <EditText
                     android:id="@+id/etCad1"
-                    style="@style/InputTiny"/>
-
+                    style="@style/InputTiny"
+                    android:inputType="number"/>
                 <TextView
-                    style="@style/Dots"/>
-
+                    style="@style/Dots" />
                 <EditText
                     android:id="@+id/etCad2"
                     style="@style/InputTiny"
-                    android:layout_marginStart="8dp"/>
-
+                    android:layout_marginStart="8dp"
+                    android:inputType="number"/>
                 <TextView
-                    style="@style/Dots"/>
-
+                    style="@style/Dots" />
                 <EditText
                     android:id="@+id/etCad3"
                     style="@style/InputTiny"
-                    android:layout_marginStart="8dp"/>
-
+                    android:layout_marginStart="8dp"
+                    android:inputType="number"/>
                 <TextView
-                    style="@style/Dots"/>
-
+                    style="@style/Dots" />
                 <EditText
                     android:id="@+id/etCad4"
                     style="@style/InputTiny"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp"
+                    android:inputType="number"/>
             </LinearLayout>
 
-            <!-- ——— Чекбоксы ——— -->
+            <!-- Чекбоксы -->
             <CheckBox
                 android:id="@+id/cbPolicy"
                 style="@style/CheckRow"
-                android:text="Согласен(-а) с политикой обработки персональных данных"/>
-
+                android:text="@string/agree_policy"/>
             <CheckBox
                 android:id="@+id/cbNews"
                 style="@style/CheckRow"
                 android:layout_marginTop="4dp"
-                android:text="Получать уведомления/рассылки о новостях"/>
+                android:text="@string/subscribe_news"/>
 
-            <!-- ——— Кнопка ——— -->
+            <!-- Кнопка -->
             <Button
                 android:id="@+id/btnRegister"
                 style="@style/GreenButton"
-                android:layout_marginTop="32dp"
-                android:text="Регистрация" />
+                android:layout_marginTop="5dp"
+                android:text="@string/btn_register"
+                android:textColor="#000"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

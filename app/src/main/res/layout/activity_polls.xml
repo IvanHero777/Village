@@ -6,41 +6,34 @@
     android:background="#D6EDAB">
 
     <!-- ─── Шапка ─────────────────────────────────────────────── -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/header"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#8DB74B"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:layout_height="wrap_content"
+        android:background="#8DB74B">
 
         <TextView
-            android:id="@+id/tvHeader"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/jura_regular"
             android:text="Опросы и петиции"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="#000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnProfile"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0" />
+            android:textColor="@color/black"
+            android:textSize="26dp" />
 
         <ImageButton
-            android:id="@+id/btnProfile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_profile_circle"
-            android:contentDescription="@string/profile"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_profile" />
+
+    </FrameLayout>
 
     <!-- ─── Контент прокручивается ───────────────────────────── -->
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -58,7 +51,11 @@
             <!-- ═════════ Муниципальный опрос ═══════════════════ -->
             <TextView
                 style="@style/SectionTitle"
-                android:text="Опрос от муниципалитета"/>
+                android:text="Опрос от муниципалитета"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jura_regular"
+                android:textSize="26dp"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -83,8 +80,9 @@
                         android:gravity="center"
                         android:text="Назначение председателя СДК в муниципалитете"
                         android:textColor="#000"
-                        android:textSize="16sp"
-                        android:textStyle="bold"/>
+                        android:textSize="20sp"
+                        android:fontFamily="@font/jura_medium"
+                        />
 
                     <!-- Даты -->
                     <LinearLayout
@@ -117,12 +115,12 @@
                         android:columnCount="2"
                         android:columnOrderPreserved="false">
 
-                        <RadioButton android:text="Блинчиков О.Н."/>
-                        <RadioButton android:text="Путин В.В."/>
-                        <RadioButton android:text="Хейный А.С."/>
-                        <RadioButton android:text="Шабашников В.П."/>
-                        <RadioButton android:text="Безруков Н.К."/>
-                        <RadioButton android:text="Важный О.О."/>
+                        <RadioButton android:text="Блинчиков О.Н." android:fontFamily="@font/jura_regular" android:textSize="18dp"/>
+                        <RadioButton android:text="Путин В.В." android:fontFamily="@font/jura_regular" android:textSize="18dp"/>
+                        <RadioButton android:text="Хейный А.С." android:fontFamily="@font/jura_regular" android:textSize="18dp"/>
+                        <RadioButton android:text="Шабашников В.П." android:fontFamily="@font/jura_regular" android:textSize="18dp"/>
+                        <RadioButton android:text="Безруков Н.К." android:fontFamily="@font/jura_regular" android:textSize="18dp"/>
+                        <RadioButton android:text="Важный О.О." android:fontFamily="@font/jura_regular" android:textSize="18dp"/>
                     </GridLayout>
 
                     <!-- Кнопка -->
@@ -132,9 +130,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="8dp"
-                        android:background="@drawable/btn_round_green"
-                        android:backgroundTint="@null"
-                        android:text="Проголосовать"/>
+                        style="@style/GreenButton"
+                        android:text="Проголосовать"
+                        android:textColor="#000"/>
 
                     <!-- Примечание -->
                     <TextView
@@ -150,7 +148,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="0dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
@@ -158,22 +156,177 @@
                     style="@style/SectionTitle"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="Опросы и петиции от жильцов"/>
+                    android:text="Опросы и петиции от жильцов"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/jura_bold" />
 
                 <ImageButton
                     android:id="@+id/btnAddPoll"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/btn_circle_add"
+                    android:background="@drawable/addbtn"
                     android:contentDescription="@string/add"/>
             </LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvPolls"
+            <LinearLayout
+                android:id="@+id/llUserPolls"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                android:layout_marginTop="8dp"/>
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <!-- Карточка опроса 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:src="@drawable/news1_thumb"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="05 июня 2025 – 05 июля 2025"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Опрос: Оценить качество работы электриков в СДК"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/jura_bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Карточка опроса 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:src="@drawable/news2_thumb"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 июня 2025 – 10 сентября 2025"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Петиция: Сбор подписей на открытие новой школы"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/jura_bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Карточка опроса 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:src="@drawable/news3_thumb"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="05 июня 2025 – 05 июля 2025"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Опрос: Оценить качество работы сантехников в СДК"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/jura_bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
+    <!-- Нижнее меню -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.4dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_news"
+            android:background="@drawable/shape_active_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_megaphone"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_service"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_graph"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cart"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+
+
+
+    </LinearLayout>
 </FrameLayout>

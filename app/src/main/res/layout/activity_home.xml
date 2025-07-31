@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EDAB">
+
+    <!-- ===== Шапка ===== -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8DB74B">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/jura_regular"
+            android:text="Новости"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_profile" />
+
+    </FrameLayout>
+
+    <!-- Контент -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Поиск -->
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Поиск"
+                android:paddingHorizontal="12dp"
+                android:drawableStart="@android:drawable/ic_menu_search"/>
+
+            <!-- Горизонтальный сролл новостей -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp">
+
+                    <!-- Карточка #1 -->
+                    <FrameLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:id="@+id/imgNews1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/big_news1" />
+
+                        <!-- полупрозрачная подложка снизу -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom"
+                            android:background="#80000000" />
+
+                        <!-- Текст наложенный -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="28 июня 2025"
+                                android:fontFamily="@font/jura_semibold"
+                                android:textColor="#FFF"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Россиян станут жестче штрафовать за мусор в водоемах"
+                                android:fontFamily="@font/jura_semibold"
+                                android:textColor="#FFF"
+                                android:textSize="22sp"
+                                />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Карточка #2 -->
+                    <FrameLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/big_news2" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom"
+                            android:background="#80000000" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="22 июня 2025"
+                                android:textColor="#FFF"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ремонт дороги на перекрестке Грицких!"
+                                android:fontFamily="@font/jura_semibold"
+                                android:textColor="#FFF"
+                                android:textSize="22sp"
+                                />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Карточка #3 -->
+                    <FrameLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/big_news3" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_gravity="bottom"
+                            android:background="#80000000" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="19 июня 2025"
+                                android:fontFamily="@font/jura_semibold"
+                                android:textColor="#FFF"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="С 2026 года россиян начнут штрафовать за оплату криптовалютой."
+                                android:textColor="#FFF"
+                                android:fontFamily="@font/jura_semibold"
+                                android:textSize="20sp"
+                                />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Заголовок секции -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Последние новости"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:fontFamily="@font/jura_bold"/>
+
+            <!-- ========== Блок последних новостей ========== -->
+            <LinearLayout
+                android:id="@+id/llLatestNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <!-- - Новость 1 - -->
+                <LinearLayout
+                    android:id="@+id/cardNews1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="22 июня 2025"
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Открыт грибнический сезон!"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/jura_bold"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- - Новость 2 - -->
+                <LinearLayout
+                    android:id="@+id/cardNews2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news2"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19 июня 2025"
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Поставлен вопрос о разделении на районы"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/jura_bold"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- - Новость 3 - -->
+                <LinearLayout
+                    android:id="@+id/cardNews3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news3"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 июня 2025"
+                            android:fontFamily="@font/jura_medium"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Еще одна никому ненужная новость"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/jura_bold"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- - Новость 4 - -->
+                <LinearLayout
+                    android:id="@+id/cardNews4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news4"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/shape_circle_mask"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 июня 2025"
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="В Камышево обнаружен Бог"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/jura_bold"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ======================================== -->
+        </LinearLayout>
+    </ScrollView>
+    <!-- Нижнее меню -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.4dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_news"
+            android:background="@drawable/shape_active_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_megaphone"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_service"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_graph"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+        <android.widget.ImageButton
+            android:layout_width="82.4dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_cart"
+            android:background="@drawable/shape_inactive_basement_btn">
+        </android.widget.ImageButton>
+
+
+
+    </LinearLayout>
+</FrameLayout>

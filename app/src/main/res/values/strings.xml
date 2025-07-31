@@ -1,3 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VillageNetworkApp</string>
+    <string name="back">Назад</string>
+    <string name="reg_title">Регистрация</string>
+
+    <string name="label_name">Имя:</string>
+    <string name="hint_name">Введите имя</string>
+
+    <string name="label_surname">Фамилия:</string>
+    <string name="hint_surname">Введите фамилию</string>
+
+    <string name="label_phone">Телефон:</string>
+    <string name="hint_phone">+7 (___) ___-__-__</string>
+
+    <string name="label_gender">Пол:</string>
+
+    <string name="section_passport">Данные паспорта:</string>
+    <string name="hint_series">Серия</string>
+    <string name="hint_number">Номер</string>
+
+    <string name="label_valid_till">Действителен до:</string>
+    <string name="hint_valid_till">ДД.MM.ГГГГ</string>
+
+    <string name="label_address">Адрес:</string>
+    <string name="hint_address">Улица, дом, корпус</string>
+
+    <string name="label_house">Дом:</string>
+    <string name="hint_house">№</string>
+    <string name="label_building">Корпус:</string>
+    <string name="hint_building">№</string>
+
+    <string name="section_cadnumber">Кадастровый номер:</string>
+
+    <string name="agree_policy">Согласен(-а) с политикой обработки ПД</string>
+    <string name="subscribe_news">Получать уведомления/рассылки о новостях</string>
+
+    <string name="btn_register">Зарегистрироваться</string>
+    <string name="add">Добавить</string>
 </resources>
