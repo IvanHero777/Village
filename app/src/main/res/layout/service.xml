@@ -8,25 +8,27 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#8DB74B"
-        android:padding="16dp">
+        android:background="#8DB74B">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/jura_regular"
             android:text="Районные службы"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="30dp" />
 
-        <!-- Иконка профиля справа -->
         <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="end|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="3dp"
             android:background="@android:color/transparent"
-            android:src="@android:drawable/sym_def_app_icon" />
+            android:src="@drawable/ic_profile" />
+
     </FrameLayout>
 
     <!-- Сетка кнопок (6 штук) -->
@@ -64,7 +66,7 @@
                     android:layout_height="95dp"
                     android:scaleType="centerInside"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_service" />
+                    android:src="@drawable/ic_service1" />
 
                 <!-- Текст снизу -->
                 <TextView
@@ -74,7 +76,8 @@
                     android:gravity="center"
                     android:text="Услуги электрика"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/jura_medium"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </FrameLayout>
@@ -101,7 +104,7 @@
                     android:layout_height="95dp"
                     android:scaleType="centerInside"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_service" />
+                    android:src="@drawable/ic_service2" />
 
                 <!-- Текст снизу -->
                 <TextView
@@ -109,9 +112,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:text="Услуги электрика"
+                    android:text="Услуги сантехника"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/jura_medium"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </FrameLayout>
@@ -138,7 +142,7 @@
                     android:layout_height="95dp"
                     android:scaleType="centerInside"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_service" />
+                    android:src="@drawable/ic_service3" />
 
                 <!-- Текст снизу -->
                 <TextView
@@ -146,9 +150,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:text="Услуги электрика"
+                    android:text="Услуги врача на дом"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/jura_medium"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </FrameLayout>
@@ -175,7 +180,7 @@
                     android:layout_height="95dp"
                     android:scaleType="centerInside"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_service" />
+                    android:src="@drawable/ic_service4" />
 
                 <!-- Текст снизу -->
                 <TextView
@@ -183,9 +188,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:text="Услуги электрика"
+                    android:text="Вызов мусора"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/jura_medium"
+                    android:textSize="15sp"/>
             </LinearLayout>
 
         </FrameLayout>
@@ -212,7 +218,7 @@
                     android:layout_height="95dp"
                     android:scaleType="centerInside"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_service" />
+                    android:src="@drawable/ic_service5" />
 
                 <!-- Текст снизу -->
                 <TextView
@@ -220,9 +226,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:text="Услуги электрика"
+                    android:text="Услуги клинига"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/jura_medium"
+                    android:textSize="14sp"/>
             </LinearLayout>
 
         </FrameLayout>
@@ -249,7 +256,7 @@
                     android:layout_height="95dp"
                     android:scaleType="centerInside"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/ic_service" />
+                    android:src="@drawable/ic_service6" />
 
                 <!-- Текст снизу -->
                 <TextView
@@ -257,9 +264,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:text="Услуги электрика"
+                    android:text="Вывоз полиции"
                     android:textColor="@android:color/black"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/jura_medium"
+                    android:textSize="14sp"/>
             </LinearLayout>
 
         </FrameLayout>
@@ -270,14 +278,15 @@
     <Button
         android:id="@+id/support_button"
         android:layout_width="wrap_content"
+        style="@style/GreenButton2"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="405dp"
+        android:layout_marginTop="440dp"
         android:text="Техническая поддержка"
         android:drawableLeft="@android:drawable/ic_menu_manage"
         android:background="@drawable/shape_round"
-        android:textColor="@android:color/black"
-        android:padding="12dp"/>
+        android:fontFamily="@font/jura_medium"
+        android:padding="17dp"/>
 
     <!-- Нижнее меню -->
     <LinearLayout

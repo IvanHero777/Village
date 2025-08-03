@@ -31,4 +31,5 @@ class MainActivity : AppCompatActivity() {
             putExtra("img", imageRes)
         })
     }
+
 }

@@ -1,5 +1,6 @@
 package com.example.villagenetworkapp
 
+/*
 class SurveyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,9 @@ class SurveyActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
     }
 
-    /** Проставить подписи 1‑10 под кружками */
+    */
+/** Проставить подписи 1‑10 под кружками *//*
+
     private fun numberize(line: LinearLayout) {
         for (i in 0 until line.childCount) {
             val holder = line.getChildAt(i) as LinearLayout
@@ -30,7 +33,9 @@ class SurveyActivity : AppCompatActivity() {
         }
     }
 
-    /** Сделать так, чтобы выбирался только один кружок и возвращать оценку */
+    */
+/** Сделать так, чтобы выбирался только один кружок и возвращать оценку *//*
+
     private fun attachCheckListener(
         line: LinearLayout,
         onSelect: (score: Int) -> Unit
@@ -51,3 +56,4 @@ class SurveyActivity : AppCompatActivity() {
         }
     }
 }
+*/

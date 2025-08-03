@@ -18,7 +18,8 @@
             android:layout_gravity="center"
             android:text="Торговая площадка"
             android:textColor="#000"
-            android:textSize="20sp"
+            android:textSize="30sp"
+            android:layout_marginTop="3dp"
             android:fontFamily="@font/jura_regular"/>
 
         <ImageButton
@@ -31,114 +32,96 @@
             android:src="@drawable/ic_profile"
             android:contentDescription="Профиль"/>
     </FrameLayout>
+    <!-- Поиск + кнопка добавить -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="65dp"
+        android:gravity="center_vertical">
 
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:hint="Поиск"
+            android:paddingStart="12dp"
+            android:drawableStart="@android:drawable/ic_menu_search"/>
+
+        <ImageButton
+            android:id="@+id/btnAddItem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/addbtn"
+            android:contentDescription="Добавить"/>
+    </LinearLayout>
+    <!-- Популярные категории -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Популярные категории"
+        android:textSize="23sp"
+        android:fontFamily="@font/jura_medium"
+        android:layout_marginTop="98dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="82dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Продукты питания"
+                style="@style/GreenButton2"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="C/X инструменты"
+                style="@style/GreenButton2"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Семена/удобрения"
+                style="@style/GreenButton2"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Хозяйственные товары"
+                style="@style/GreenButton2"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
     <!-- ===== Контент ===== -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="82dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="80dp"
         android:fillViewport="true"
         android:clipToPadding="false"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
-
-        <LinearLayout
-            android:id="@+id/llContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Поиск + кнопка добавить -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="12dp"
-                android:gravity="center_vertical">
-
-                <EditText
-                    android:id="@+id/etSearch"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/edit_text"
-                    android:hint="Поиск"
-                    android:paddingStart="12dp"
-                    android:drawableStart="@android:drawable/ic_menu_search"/>
-
-                <ImageButton
-                    android:id="@+id/btnAddItem"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/addbtn"
-                    android:contentDescription="Добавить"/>
-            </LinearLayout>
-
-            <!-- Популярные категории -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Популярные категории"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"/>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:text="Продукты питания"
-                        android:background="@drawable/btn_round_outline"
-                        style="@style/GreenButton"
-                        android:textSize="12sp"/>
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:layout_marginStart="8dp"
-                        android:text="C/X инструменты"
-                        android:background="@drawable/btn_round_outline"
-                        android:textSize="12sp"/>
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:layout_marginStart="8dp"
-                        android:text="Семена/удобрения"
-                        android:background="@drawable/btn_round_outline"
-                        android:textSize="12sp"/>
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:layout_marginStart="8dp"
-                        android:text="Хозяйственные товары"
-                        android:background="@drawable/btn_round_outline"
-                        android:textSize="12sp"/>
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <!-- Популярные товары -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Популярные товары"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"/>
 
             <!-- Список карточек -->
             <LinearLayout
@@ -158,45 +141,50 @@
                     android:background="@drawable/card_bg">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/product_eggs"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:paddingStart="12dp">
+                        android:paddingStart="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Яйца домашние"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="26sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Продукты питания • 40 руб/шт"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
                             android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Срок годности: 10 дней. Хранить в прохладном месте."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Телефон: +7 (913) 555-88-12"
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -210,8 +198,9 @@
                     android:background="@drawable/card_bg">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/product_honey"
                         android:scaleType="centerCrop"/>
 
@@ -226,28 +215,31 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Мёд натуральный"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="26sp"/>/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Продукты питания • 300 руб/кг"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
                             android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Собран в июне 2025. Без добавок."
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
                             android:layout_marginTop="4dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Телефон: +7 (912) 444-77-66"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
                             android:layout_marginTop="4dp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -262,8 +254,9 @@
                     android:background="@drawable/card_bg">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/product_apples"
                         android:scaleType="centerCrop"/>
 
@@ -278,29 +271,32 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Яблоки свежие"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="26sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Продукты питания • 70 руб/кг"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
                             android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Сорт «Антоновка». Хранить при +4…+6°C."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Телефон: +7 (914) 333-22-11"
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -314,8 +310,9 @@
                     android:background="@drawable/card_bg">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
                         android:src="@drawable/product_milk"
                         android:scaleType="centerCrop"/>
 
@@ -330,35 +327,148 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Молоко деревенское"
-                            android:textStyle="bold"
-                            android:textSize="16sp"/>
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="26sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Продукты питания • 60 руб/л"
-                            android:textSize="12sp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
                             android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Не более 5 дней с даты производства."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Телефон: +7 (915) 777-88-99"
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp"/>
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Карточка 5: Сыр деревенский -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/card_bg">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/product_cheese"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Сыр деревенский"
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="26sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Продукты питания • 450 руб/кг"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Состав: молоко, закваска, соль."
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Телефон: +7 (916) 222-33-44"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Карточка 6: Хлеб деревенский -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/card_bg">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/product_bread"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Хлеб деревенский"
+                            android:fontFamily="@font/jura_medium"
+                            android:textSize="26sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Продукты питания • 50 руб/шт"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="С пылу, с жару. Без консервантов."
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Телефон: +7 (917) 333-44-55"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/jura_medium"
+                            android:layout_marginTop="2dp"/>
                     </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
     <!-- ===== Нижнее меню ===== -->
