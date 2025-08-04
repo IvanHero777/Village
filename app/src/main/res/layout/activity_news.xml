@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".NewsActivity"
     android:background="#D6EDAB">
-
     <!-- ===== Шапка ===== -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:background="#8DB74B">
 
         <TextView
@@ -21,6 +24,7 @@
             android:textSize="30dp" />
 
         <ImageButton
+            android:id="@+id/btnProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
@@ -30,7 +34,6 @@
             android:src="@drawable/ic_profile" />
 
     </FrameLayout>
-
     <!-- Контент -->
     <ScrollView
         android:layout_width="match_parent"
@@ -44,16 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- Поиск -->
-            <EditText
-                android:id="@+id/etSearch"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@android:drawable/edit_text"
-                android:hint="Поиск"
-                android:paddingHorizontal="12dp"
-                android:drawableStart="@android:drawable/ic_menu_search"/>
 
             <!-- Горизонтальный сролл новостей -->
             <HorizontalScrollView
@@ -395,36 +388,38 @@
         >
         <android.widget.ImageButton
             android:layout_width="82.4dp"
+            android:id="@+id/btnNews"
             android:layout_height="match_parent"
             android:src="@drawable/ic_news"
             android:background="@drawable/shape_active_basement_btn">
         </android.widget.ImageButton>
         <android.widget.ImageButton
             android:layout_width="82.4dp"
+            android:id="@+id/btnAdvert"
             android:layout_height="match_parent"
             android:src="@drawable/ic_megaphone"
             android:background="@drawable/shape_inactive_basement_btn">
         </android.widget.ImageButton>
         <android.widget.ImageButton
             android:layout_width="82.4dp"
+            android:id="@+id/btnService"
             android:layout_height="match_parent"
             android:src="@drawable/ic_service"
             android:background="@drawable/shape_inactive_basement_btn">
         </android.widget.ImageButton>
         <android.widget.ImageButton
             android:layout_width="82.4dp"
+            android:id="@+id/btnPolls"
             android:layout_height="match_parent"
             android:src="@drawable/ic_graph"
             android:background="@drawable/shape_inactive_basement_btn">
         </android.widget.ImageButton>
         <android.widget.ImageButton
             android:layout_width="82.4dp"
+            android:id="@+id/btnMarket"
             android:layout_height="match_parent"
             android:src="@drawable/ic_cart"
             android:background="@drawable/shape_inactive_basement_btn">
         </android.widget.ImageButton>
-
-
-
     </LinearLayout>
 </FrameLayout>

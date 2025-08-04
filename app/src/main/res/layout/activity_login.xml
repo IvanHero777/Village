@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/registration_frame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="СДК\n“Камышево”"
+            android:fontFamily="@font/jura_regular"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#000"
+            android:gravity="center" />
+
+        <!-- Герб -->
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_gerb_kamyshevo"
+            android:scaleType="centerInside" />
+
+        <!-- ── Поле Телефон ── -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:hint="Телефон"
+            android:background="@drawable/bg_input_round"
+            android:inputType="phone"
+            android:paddingHorizontal="12dp"
+            android:textColor="#000"/>
+
+        <!-- ── Поле Пароль ── -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:hint="Пароль"
+            android:background="@drawable/bg_input_round"
+            android:inputType="textPassword"
+            android:paddingHorizontal="12dp"
+            android:textColor="#000"/>
+
+        <!-- ── Зелёная «Войти» ── -->
+        <LinearLayout
+            android:id="@+id/btnLogin"
+            android:layout_width="230dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn_green"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Войти"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- ── Белая «Войти через ЕСИА» ── -->
+        <LinearLayout
+            android:id="@+id/btnEsia"
+            android:layout_width="230dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_esia_logo"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Войти через ЕСИА"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- ── Ссылка‑регистрация ── -->
+        <TextView
+            android:id="@+id/linkRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Регистрация по месту проживания"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:clickable="true"/>
+    </LinearLayout>
+
+  </FrameLayout>

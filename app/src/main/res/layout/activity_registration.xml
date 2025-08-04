@@ -21,9 +21,10 @@
             android:layout_height="40dp"
             android:background="@drawable/ic_back_arrow"
             android:contentDescription="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -111,59 +112,22 @@
                     android:inputType="phone"/>
             </LinearLayout>
 
-            <!-- Пол -->
+            <!-- Пароль -->
             <LinearLayout style="@style/Row">
                 <TextView
                     style="@style/LabelText"
-                    android:text="@string/label_gender"
+                    android:text="Пароль:"
                     android:background="@drawable/bg_label"
                     android:textSize="22sp"
                     android:fontFamily="@font/jura_regular"
                     android:padding="6dp"/>
-                <Spinner
-                    android:id="@+id/spGender"
-                    android:layout_marginTop="5dp"
+                <EditText
+                    android:id="@+id/etPassword"
                     style="@style/Input"
-                    android:layout_marginStart="8dp"/>
-            </LinearLayout>
-
-            <!-- Паспорт -->
-            <TextView
-                style="@style/SectionLabel"
-                android:text="@string/section_passport"
-                android:textSize="22sp"
-                android:fontFamily="@font/jura_regular"
-                android:layout_marginTop="16dp"/>
-            <LinearLayout style="@style/RowSmall">
-                <EditText
-                    android:id="@+id/etPassportSeries"
-                    style="@style/InputShort"
-                    android:hint="@string/hint_series"
-                    android:inputType="number"/>
-                <EditText
-                    android:id="@+id/etPassportNumber"
-                    style="@style/InputMedium"
                     android:layout_marginStart="8dp"
-                    android:hint="@string/hint_number"
-                    android:inputType="number"/>
-            </LinearLayout>
-
-            <!-- Действителен до -->
-            <LinearLayout style="@style/Row">
-                <TextView
-                    style="@style/LabelText"
-                    android:textSize="22sp"
-                    android:fontFamily="@font/jura_regular"
-                    android:text="@string/label_valid_till"
-                    android:background="@drawable/bg_label"
-                    android:padding="6dp"/>
-                <EditText
-                    android:id="@+id/etValidTill"
-                    style="@style/Input"
                     android:layout_marginTop="5dp"
-                    android:layout_marginStart="8dp"
-                    android:hint="@string/hint_valid_till"
-                    android:inputType="date"/>
+                    android:hint="Введите пароль"
+                    android:inputType="textPassword"/>
             </LinearLayout>
 
             <!-- Адрес -->
@@ -182,76 +146,6 @@
                     android:layout_marginTop="5dp"
                     android:hint="@string/hint_address"
                     android:inputType="textPostalAddress"/>
-            </LinearLayout>
-
-            <!-- Дом/Корпус -->
-            <LinearLayout style="@style/RowSmall">
-                <TextView
-                    style="@style/LabelText"
-                    android:text="@string/label_house"
-                    android:textSize="22sp"
-                    android:fontFamily="@font/jura_regular"
-                    android:background="@drawable/bg_label"
-                    android:padding="6dp"/>
-                <EditText
-                    android:id="@+id/etHouse"
-                    style="@style/InputShort"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginStart="8dp"
-                    android:hint="@string/hint_house"
-                    android:inputType="text"/>
-                <TextView
-                    style="@style/LabelText"
-                    android:text="@string/label_building"
-                    android:textSize="22sp"
-                    android:fontFamily="@font/jura_regular"
-                    android:layout_marginStart="12dp"
-                    android:background="@drawable/bg_label"
-                    android:padding="6dp"/>
-                <EditText
-                    android:id="@+id/etBuilding"
-                    style="@style/InputShort"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginStart="8dp"
-                    android:hint="@string/hint_building"
-                    android:inputType="text"/>
-            </LinearLayout>
-
-            <!-- Кадастр. номер -->
-            <TextView
-                style="@style/SectionLabel"
-                android:textSize="22sp"
-                android:fontFamily="@font/jura_regular"
-                android:text="@string/section_cadnumber"
-                android:layout_marginTop="16dp"/>
-            <LinearLayout
-                style="@style/RowSmall"
-                android:layout_marginTop="4dp">
-                <EditText
-                    android:id="@+id/etCad1"
-                    style="@style/InputTiny"
-                    android:inputType="number"/>
-                <TextView
-                    style="@style/Dots" />
-                <EditText
-                    android:id="@+id/etCad2"
-                    style="@style/InputTiny"
-                    android:layout_marginStart="8dp"
-                    android:inputType="number"/>
-                <TextView
-                    style="@style/Dots" />
-                <EditText
-                    android:id="@+id/etCad3"
-                    style="@style/InputTiny"
-                    android:layout_marginStart="8dp"
-                    android:inputType="number"/>
-                <TextView
-                    style="@style/Dots" />
-                <EditText
-                    android:id="@+id/etCad4"
-                    style="@style/InputTiny"
-                    android:layout_marginStart="8dp"
-                    android:inputType="number"/>
             </LinearLayout>
 
             <!-- Чекбоксы -->

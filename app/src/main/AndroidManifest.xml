@@ -12,17 +12,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VillageNetworkApp">
         <activity
-            android:name=".NewsTouchActivity"
-            android:screenOrientation="portrait"/>
-
+            android:name=".ProfileActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MarketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PollsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdvertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistrationActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NewsTouchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

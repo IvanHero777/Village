@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class RegistrationActivity : AppCompatActivity() {
@@ -19,27 +20,49 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
-        etName     = findViewById(R.id.etName)
-        etSurname  = findViewById(R.id.etSurname)
-        etPhone    = findViewById(R.id.etPhone)
-        etAddress  = findViewById(R.id.etAddress)
-        spGender   = findViewById(R.id.spGender)
+        val userName: EditText = findViewById(R.id.etName)
+        val userSurname: EditText = findViewById(R.id.etSurname)
+        val userNumber: EditText = findViewById(R.id.etPhone)
+        val userPassword: EditText = findViewById(R.id.etPassword)
+        val userAddress: EditText = findViewById(R.id.etAddress)
+        val buttonReg: Button = findViewById(R.id.btnRegister)
+        val btnLinkToLogIn: ImageButton = findViewById(R.id.btnBack)
 
-        findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
-        findViewById<Button>(R.id.btnRegister).setOnClickListener { saveAndNext() }
-    }
+        btnLinkToLogIn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
-    private fun saveAndNext() {
-        val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        prefs.edit()
-            .putString("NAME", etName.text.toString())
-            .putString("SURNAME", etSurname.text.toString())
-            .putString("PHONE", etPhone.text.toString())
-            .putString("ADDRESS", etAddress.text.toString())
-            .putString("GENDER", spGender.selectedItem.toString())
-            .apply()
+        buttonReg.setOnClickListener {
+            val name = userName.text.toString().trim()
+            val surname = userSurname.text.toString().trim()
+            val number = userNumber.text.toString().trim()
+            val password = userPassword.text.toString().trim()
+            val address = userAddress.text.toString()
 
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
+            if (name == "" || surname == "" || number == "" || password == "" || address == "")
+                Toast.makeText(
+                    this,
+                    "Необходимо проверить заполненость всех полей",
+                    Toast.LENGTH_LONG
+                ).show()
+            else {
+                val user = User(name, surname, number, password, address)
+
+                val db = DbHelper(this, null)
+                db.addUser(user)
+                Toast.makeText(
+                    this,
+                    "Пользователь $number успешно зарегестриирован!",
+                    Toast.LENGTH_LONG
+                ).show()
+
+                userName.text.clear()
+                userSurname.text.clear()
+                userNumber.text.clear()
+                userPassword.text.clear()
+                userAddress.text.clear()
+            }
+        }
     }
 }

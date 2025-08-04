@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#D6EDAB"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:background="#D6EDAB">
 
     <!-- Заголовок -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
+        android:layout_height="76dp"
         android:background="#8DB74B"
-        android:text="Данные аккаунта"
         android:fontFamily="@font/jura_regular"
-        android:textSize="28sp"/>
+        android:gravity="center"
+        android:text="Данные аккаунта"
+        android:textSize="28sp" />
 
     <!-- Контейнер с данными -->
     <ScrollView
@@ -26,7 +29,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:layout_marginTop="100dp">
 
             <!-- Фото -->
             <ImageView
@@ -34,7 +38,6 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/ic_profile"
-
                 android:layout_marginTop="16dp"/>
 
             <!-- Имя Фамилия -->
@@ -45,13 +48,6 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
-
-            <!-- Роль/подпись -->
-            <TextView
-                android:id="@+id/tvRole"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Житель СДК" />
 
             <!-- Адрес -->
             <TextView
@@ -67,27 +63,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <!-- Почта и кнопка -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/tvEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Почта: [NONE]"/>
-
-                <Button
-                    android:id="@+id/btnAddEmail"
-                    android:layout_marginStart="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Добавить"/>
-            </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 
@@ -102,7 +77,7 @@
             android:layout_width="82.4dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_news"
-            android:background="@drawable/shape_active_basement_btn">
+            android:background="@drawable/shape_inactive_basement_btn">
         </android.widget.ImageButton>
         <android.widget.ImageButton
             android:layout_width="82.4dp"
@@ -132,4 +107,4 @@
 
 
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>
