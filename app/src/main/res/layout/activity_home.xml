@@ -418,6 +418,7 @@
             android:background="@drawable/shape_inactive_basement_btn">
         </android.widget.ImageButton>
         <android.widget.ImageButton
+            android:id="@+id/btnMarketplace"
             android:layout_width="82.4dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_cart"

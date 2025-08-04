@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.cardNews4).setOnClickListener {
             openNews(R.drawable.news4_big)
         }
+        findViewById<View>(R.id.btnMarketplace).setOnClickListener {
+            startActivity(Intent(this, MarketplaceActivity::class.java))
+        }
     }
 
     private fun openNews(imageRes: Int) {

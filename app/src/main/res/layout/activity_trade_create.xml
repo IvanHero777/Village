@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6EDAB">
+
+    <!-- ── Шапка ─────────────────────────────────────────── -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#8DB74B">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Разместите товар"
+            android:textSize="30sp"
+            android:textColor="#000"
+            android:fontFamily="@font/jura_regular"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Профиль"/>
+    </FrameLayout>
+
+    <!-- ── Контент ───────────────────────────────────────── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="90dp"
+        android:fillViewport="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Фото + кнопка -->
+            <ImageView
+                android:id="@+id/ivPreview"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/ic_add_photo"
+                />
+
+            <Button
+                android:id="@+id/btnPickImage"
+                style="@style/GreenButton2"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:text="Выбрать фото"
+                />
+
+            <!-- Поля ввода -->
+            <EditText
+                android:id="@+id/etName"
+                style="@style/Input2"
+                android:hint="Название товара" />
+
+            <EditText
+                android:id="@+id/etDesc"
+                style="@style/Input2"
+                android:hint="Категория"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:gravity="top"/>
+
+            <EditText
+                android:id="@+id/etPrice"
+                style="@style/Input2"
+                android:hint="Цена, ₽"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/Input2"
+                android:hint="Телефон"
+                android:inputType="phone" />
+
+            <!-- Кнопка сохранить -->
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/GreenButton2"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="Добавить товар"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ── Нижнее меню (оставил как было) ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82.4dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <!-- пять кнопок как в trade.xml -->
+        <ImageButton android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:src="@drawable/ic_news"
+            android:background="@drawable/shape_active_basement_btn"/>
+        <ImageButton android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:src="@drawable/ic_megaphone"
+            android:background="@drawable/shape_inactive_basement_btn"/>
+        <ImageButton android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:src="@drawable/ic_service"
+            android:background="@drawable/shape_inactive_basement_btn"/>
+        <ImageButton android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:src="@drawable/ic_graph"
+            android:background="@drawable/shape_inactive_basement_btn"/>
+        <ImageButton android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:src="@drawable/ic_cart"
+            android:background="@drawable/shape_inactive_basement_btn"/>
+    </LinearLayout>
+</FrameLayout>
